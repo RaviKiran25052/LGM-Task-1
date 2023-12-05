@@ -8,6 +8,9 @@
 }
 body {
   background-image: url('bg.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 ::-webkit-scrollbar {
   width: 6px;
@@ -28,7 +31,7 @@ body {
   width: 100%;
   border-radius: 8px;
   padding: 25px;
-  margin: 85px auto 0;
+  margin: 100px 30px 0;
   background-color: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -119,7 +122,7 @@ textarea::-webkit-scrollbar {
   border-radius: 10px;
 }
 
-.container .pending-tasks {
+.pending-tasks {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -143,8 +146,28 @@ textarea::-webkit-scrollbar {
 .clear-button:hover {
   background-color: #0e4bf1;
 }
-@media screen and (max-width: 350px) {
-  .container {
-    padding: 25px 10px;
+
+@media (max-width: 768px) {
+  
+  .container .input-field  {
+    height: 50px;
+  }
+  .input-field textarea {
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 8px;
+    padding: 16px 45px 16px 15px;
+  }
+  .todoLists .list {
+    height: 50px;
+  }
+  .pending-tasks {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+  }
+  .clear-button {
+    display: block;
+    margin: 20px auto 0; /* Adjust the margin as needed */
   }
 }
